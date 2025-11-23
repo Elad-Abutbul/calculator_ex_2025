@@ -1,0 +1,108 @@
+:root {
+    --bg-color: #f3f4f6;
+    --calc-bg: #ffffff;
+    --btn-bg: #e5e7eb;
+    --btn-hover: #d1d5db;
+    --op-bg: #3b82f6;
+    --op-color: #ffffff;
+    --display-bg: #1f2937;
+    --display-color: #ffffff;
+    --text-color: #111827;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--bg-color);
+}
+
+.calculator {
+    background-color: var(--calc-bg);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.display {
+    background-color: var(--display-bg);
+    color: var(--display-color);
+    font-size: 2.5rem;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: right;
+    margin-bottom: 10px;
+    overflow-x: auto;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.row {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+button {
+    flex: 1;
+    padding: 15px;
+    font-size: 1.25rem;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--btn-bg);
+    color: var(--text-color);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-weight: 500;
+}
+
+button:hover {
+    background-color: var(--btn-hover);
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* Operations Row Styling */
+.operations button {
+    background-color: var(--op-bg);
+    color: var(--op-color);
+    font-weight: bold;
+}
+
+.operations button:hover {
+    filter: brightness(110%);
+}
+
+/* Last Row Styling */
+.last-row button {
+    background-color: #10b981; /* Green for equals/action */
+    color: white;
+}
+
+.last-row button:first-child {
+    background-color: #ef4444; /* Red for Clear */
+}
+
+.last-row button:nth-child(2) {
+    background-color: var(--btn-bg);
+    color: var(--text-color);
+}
