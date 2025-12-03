@@ -2,7 +2,6 @@ let firstNum = 0;
 let secondNumb = 0;
 let operator = null;
 let bool = true; 
-
 const buttons = document.querySelector(".buttons");
 const display = document.querySelector(".display");
 
